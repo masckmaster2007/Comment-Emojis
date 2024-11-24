@@ -155,11 +155,13 @@ void EmojiPickPopup::onPickEmoji(CCObject* sender)
 EmojiPickPopup* EmojiPickPopup::create(CCTextInputNode* input, CCNode* node)
 {
     auto ret = new EmojiPickPopup();
+    /* I know this won't work, but why not try it?
     if (ret && ret->init(360, 200, input, node))
     {
         ret->autorelease();
         return ret;
     }
+    */
     CC_SAFE_DELETE(ret);
     return nullptr;
 }
